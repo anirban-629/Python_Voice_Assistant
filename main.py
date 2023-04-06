@@ -8,6 +8,8 @@ import webbrowser
 import os
 
 
+
+
 engine=pyttsx3.init('sapi5')
 voices=engine.getProperty('voices')
 engine.setProperty('voice',voices[0].id)
@@ -20,9 +22,11 @@ def greet():
         speak(f"good Afternoon,    Hello sir, I'm Jarvis how Can I help you")
     else:
         speak(f"good Evening,   Hello sir, I'm Jarvis how Can I help you")
+
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
+
 def takeCommand():
     r=sr.Recognizer()
     # this class recognizer helps to recognize the audio
